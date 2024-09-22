@@ -90,6 +90,7 @@ The report comprises 4 Insights:
 3. Occurrences of Payment 
 4. Distribution of Credit utilisation ratio.
 
+### Insights
 1. Average  income by occupation: 
  ![](avg_income.png)
 
@@ -111,6 +112,7 @@ This showed that we had more customers who paid minimum amount and less of custo
 This indicates that the distribution of the credit utilisation ratio is symmetrical and shows a normal distribution. This showed that many customers are utilising theri credit averagely and are staying within a reasonable range of credit utilisation.
 
 ## Challenges encountered 
+
 1. For the average annual  income by occupation, I initially visualized it by grouping the occupations such as teacher, engineer, writer. However I realized that each customer had 4 rows related to them and the annual income but have been the same.
 So I optimized the code to also select the distinct customer_id so it returns each value for each customer when grouping the occupation way 
 
@@ -126,9 +128,7 @@ So I optimized the code to also select the distinct customer_id so it returns ea
 ## ETL
 After Extracting form the web and transforming, I loaded the transformed data to a postgreSQL database 
 
-[SQL code]
-[im\ges of table
-
+See code [[here](https://github.com/rubytechme/FinTech-ETL-Analysis/blob/main/Fintech_ETL.ipynb)]
 
 ## Conclusion
 Data Cleaning is the most essential part of analysis, Bad data = bad insights. And the good thing is, there are some cools tricks that make data cleaning less rigorous.
