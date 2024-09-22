@@ -1,6 +1,6 @@
 # FinTech-ETL-Analysis
 
-![](intro.image.jpeg)
+![](intro.fintech.jpg)
 
 ## Introduction:
  
@@ -38,7 +38,7 @@ I used the following functions to understand my data such as its structure, each
 - data.info
 - data.dtypes
 
-[link]
+See code [[here](https://github.com/rubytechme/FinTech-ETL-Analysis/blob/main/EDA.ipynb)]
 
 - It showed that about 8 columns had null values such as name, monthly inland salary, type of loan, num credit inquires, credit history age,amount invested monthly.
 Although other columns appeared inconsistent and dirty.
@@ -50,8 +50,6 @@ Although other columns appeared inconsistent and dirty.
 1. Handling unwanted symbols 
 I created a list to hold the specific columns that had unwanted symbols like - or _ 
 Then defined a loop to iterate over the columns that are in the list and replace the values with nothing
-
-[link]
 
 2. Handling Data type/defining functions
 I defined a function that converted specified columns in a created list that were identified as objects to float64
@@ -75,14 +73,14 @@ I then applied a group by function to group each customer by their name and fill
 7. Data governance: I choose not to tamper with the Type of  loan column to maintain more data quality, as it appears to be a very sensitive column holding sensitive information. Each data point can be retrieved by contacting the customer in question.
 For each customer, we can retrieve the data point either through direct contact with the customer or from a specific source.
 
-[Link to code]
+See code [[here](https://github.com/rubytechme/FinTech-ETL-Analysis/blob/main/Data_cleaning.ipynb)]
 
 
 ### Feature Engineering:
 1. Credit History Age
 I transformed the credit history age column into an integer column by extracting the numerical elements in the column, using the regex(regular expressions). By this I searched for a 2 digit numeric and then retrieved its match. Then I converted it from a string to an integer by combining them as decimals using division 12.
 
-This new column was called Credit history age edit. I then went ahead to fill it with the mean but only group to each 4 occurrences of the customer name for more uniformity.
+This new column was called Credit history age edit. I then went ahead to fill it with the mean but only grouped to each 4 occurrences of the customer name for more uniformity.
 
 
 ## Analysis/Insights:
@@ -95,24 +93,25 @@ The report comprises 4 Insights:
 1. Average  income by occupation: 
  ![](avg_income.png)
 
-The store currently have a total of 1765 customers
-330K orders were made in the current year.
+Customers who are developers had the highest income, and customers who are lawyers followed by a slim margin. Whereas, writers had the lowest revenue 
 
 2. Correlation between Monthly salary and Amount invested:
  ![](correlation.png)
 
-There are 128 products in the stores with a worth of 140 million dollars.
-Each product II streamyard.com is sharing your screen.
+The amount invested by a customer had no correlation with their annual income, though I expected a correlation. This means that the more people earn, the less likely for them to increase their investment stake. And this might mean that there are other factors influencing the investment habits of their customers other than salary.
 
 3. Occurrences of Payment:
  ![](payment.png)
 
+This showed that we had more customers who paid minimum amount and less of customers that paid minimum amount.
 
-4. Distribution of Credit utilisation ratio:
+5. Distribution of Credit utilisation ratio:
  ![](distribution.png)
 
+This indicates that the distribution of the credit utilisation ratio is symmetrical and shows a normal distribution. This showed that many customers are utilising theri credit averagely and are staying within a reasonable range of credit utilisation.
+
 ## Challenges encountered 
-1.For the average annual  income by occupation, I initially visualized it by grouping the occupations such as teacher, engineer, writer. However I realized that each customer had 4 rows related to them and the annual income but have been the same.
+1. For the average annual  income by occupation, I initially visualized it by grouping the occupations such as teacher, engineer, writer. However I realized that each customer had 4 rows related to them and the annual income but have been the same.
 So I optimized the code to also select the distinct customer_id so it returns each value for each customer when grouping the occupation way 
 
 2. I tried convert specified columns in a list to a float, however a column appeared stubborn. I need introduced new blocks into the loop so that it return the die if column that had error, its index and  value. 
