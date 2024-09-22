@@ -80,9 +80,9 @@ For each customer, we can retrieve the data point either through direct contact 
 
 ### Feature Engineering:
 1. Credit History Age
-I transformed the credit history age column into an integer column by extracted the numerical elements in the column, using the regex(regular expressions). By this I searched for a 2 digit numeric and then retrieved its match. Then I converted it from a string to an integer by combining them as decimals using division 12.
+I transformed the credit history age column into an integer column by extracting the numerical elements in the column, using the regex(regular expressions). By this I searched for a 2 digit numeric and then retrieved its match. Then I converted it from a string to an integer by combining them as decimals using division 12.
 
-This new column was called Credit history age edit. I then went ahead to fill it with the mean but only group to each 4 occurrence of the customer name for more uniformity.
+This new column was called Credit history age edit. I then went ahead to fill it with the mean but only group to each 4 occurrences of the customer name for more uniformity.
 
 
 ## Analysis/Insights:
