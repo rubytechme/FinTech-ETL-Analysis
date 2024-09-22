@@ -3,7 +3,7 @@
 ![](intro.image.jpeg)
 
 ## Introduction:
-
+ 
 This data is a customer data for a fintech company. The goal is to understand the data, transform the data using various techniques, analyse the data in order to come up with inferences that could provide more insights into the firm’s customer profiles and then load the transformed data into an SQL database.
 
 
@@ -93,23 +93,23 @@ The report comprises 4 Insights:
 4. Distribution of Credit utilisation ratio.
 
 1. Average  income by occupation: 
- [image]
+ ![](avg_income.png)
 
 The store currently have a total of 1765 customers
 330K orders were made in the current year.
 
 2. Correlation between Monthly salary and Amount invested:
-[image]
+ ![](correlation.png)
 
 There are 128 products in the stores with a worth of 140 million dollars.
 Each product II streamyard.com is sharing your screen.
 
 3. Occurrences of Payment:
-[image]
+ ![](payment.png)
 
 
 4. Distribution of Credit utilisation ratio:
-[image]
+ ![](distribution.png)
 
 ## Challenges encountered 
 1.For the average annual  income by occupation, I initially visualized it by grouping the occupations such as teacher, engineer, writer. However I realized that each customer had 4 rows related to them and the annual income but have been the same.
